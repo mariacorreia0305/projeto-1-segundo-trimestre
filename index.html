@@ -3,98 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo do Snoopy & Alura</title>
+    <title>Mundo do Homem-Aranha & Alura</title>
     
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #fcfcfc;
-            color: #000;
+            background-color: #0b0e14; /* Fundo escuro tecnológico */
+            color: #fff;
             margin: 0;
             padding: 0;
         }
 
-        /* Topo Amarelo (Cor do Charlie Brown) */
+        /* Topo Vermelho do Homem-Aranha */
         header {
-            background-color: #f7d117; 
+            background-color: #d32f2f; 
             text-align: center;
             padding: 30px;
-            border-bottom: 4px solid #000;
+            border-bottom: 5px solid #1976d2; /* Borda Azul */
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
         }
 
-        /* Caixa centralizada branca */
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px #000;
+        }
+
+        /* Caixa centralizada principal */
         .container {
             max-width: 700px;
             margin: 30px auto;
             padding: 20px;
-            background: #fff;
-            border: 4px solid #000;
+            background: #151b26;
+            border: 2px solid #1976d2;
             border-radius: 12px;
-            box-shadow: 6px 6px 0px #000;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
         }
 
-        /* Títulos em Vermelho (Casinha do Snoopy) */
+        /* Títulos das Seções */
         h2 {
-            color: #e53935;
-            border-bottom: 3px solid #000;
+            color: #d32f2f;
+            border-bottom: 2px solid #1976d2;
             padding-bottom: 5px;
+            text-transform: uppercase;
         }
 
         /* Estilo das Imagens e GIFs */
-        .imagem-snoopy {
+        .imagem-aranha {
             display: block;
             max-width: 100%;
             height: auto;
             margin: 20px auto;
-            border: 3px solid #000;
+            border: 2px solid #d32f2f;
             border-radius: 8px;
-            box-shadow: 4px 4px 0px #000;
         }
 
         .gif-decorativo {
             display: block;
-            max-width: 200px;
+            max-width: 220px;
             margin: 20px auto;
-            border: 2px solid #000;
-            border-radius: 4px;
+            border: 2px solid #1976d2;
+            border-radius: 6px;
         }
 
         /* Cartão para os códigos da Alura */
         .card {
-            background-color: #fffde7;
-            border: 3px solid #000;
-            border-radius: 8px;
-            padding: 15px;
+            background-color: #1f2736;
+            border-left: 5px solid #d32f2f;
+            border-radius: 4px;
+            padding: 20px;
             margin-top: 15px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #1976d2;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Snoopy & Meus Projetos</h1>
-        <p>Bem-vindo ao meu site! Aqui misturo o universo do Snoopy com o que aprendo na Alura.</p>
-        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHI0ZTh3cHdtbXN3cmN0cm01Mms0ZndwZ3Z0ZHp0NTRwNms4bXptdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oD3lTi5VxNJaU/giphy.gif" alt="Snoopy Dançando" class="gif-decorativo">
+        <h1>Spider-Man & Meus Projetos</h1>
+        <p>Com grandes poderes vêm grandes responsabilidades... e muitos códigos na Alura!</p>
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3N5bHd0NXZyeWdzY29wY3N5YmcybXN6ZnI4bXN6bXNnbXN6bXN6bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sfVEHTbZs7648/giphy.gif" alt="Homem-Aranha acenando" class="gif-decorativo">
     </header>
 
     <main class="container">
         <section class="perfil">
-            <h2>Sobre o Snoopy</h2>
-            <p>Snoopy é o beagle mais famoso do mundo, conhecido por dormir no telhado de sua casinha vermelha e ter uma imaginação incrível!</p>
+            <h2>O Amigão da Vizinhança</h2>
+            <p>Peter Parker era apenas um estudante comum até ser picado por uma aranha radioativa. Agora, ele usa seus poderes para proteger Nova York e equilibrar sua vida pessoal.</p>
             
-            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmRhOHFvMGg2ZHhkd3o3M3AxeDVvbjRxOHo4aWw0b2Fwbm1iaGd3NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/d3mlE7uhX8KFgEmY/giphy.gif" alt="Snoopy e Woodstock relaxando" class="imagem-snoopy">
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3N0NDZhcW90bXAyYmF5dWwwNDFvZHh4ZHJ6bDZ6bXNnbXN6bXN6bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1qjCXhkBmUSDm/giphy.gif" alt="Homem-Aranha saltando" class="imagem-aranha">
         </section>
 
         <section class="meus-projetos">
             <h2>Meus Aprendizados na Alura</h2>
-            <p>Abaixo estão as decorações e os códigos das minhas aulas:</p>
+            <p>Aqui ficam os projetos que desenvolvi enquanto treino minhas habilidades de programação:</p>
             
             <div class="card">
                 <h3>Projeto Alura 1</h3>
-                <p>Aqui vai a descrição do primeiro código que você aprendeu.</p>
+                <p>Aqui vai a descrição do código ou desafio que você concluiu na plataforma.</p>
             </div>
             
-            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDNnbzEwZHZ2ZXRndGF5YmdrNGwwcjFlNnptbXR3M3p2MXl1b3V3byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/w8f283BIGaeHoZFMcs/giphy.gif" alt="Snoopy no computador" class="gif-decorativo">
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z2N3R4bXN6bXNnbXN6bXN6bXN6bXNnbXN6bXN6bXN6bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BWD3Ctfe8OJWU/giphy.gif" alt="Homem-Aranha no notebook" class="gif-decorativo">
         </section>
     </main>
 
