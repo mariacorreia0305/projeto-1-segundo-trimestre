@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #0b0e14; /* Fundo escuro tecnológico */
+            background-color: #0b0e14; /* Fundo escuro */
             color: #fff;
             margin: 0;
             padding: 0;
@@ -50,17 +50,6 @@
             text-transform: uppercase;
         }
 
-        /* Estilo das Imagens Estáticas */
-        .imagem-aranha {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            margin: 20px auto;
-            border: 3px solid #1976d2;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(25, 118, 210, 0.3);
-        }
-
         /* Cartão para os códigos da Alura */
         .card {
             background-color: #1f2736;
@@ -68,6 +57,50 @@
             border-radius: 4px;
             padding: 20px;
             margin-top: 15px;
+            min-height: 40px; /* Mantém o espaço do cartão vazio */
+        }
+
+        /* ==========================================
+           DESENHOS EM PIXEL ART FEITOS COM CÓDIGO CSS
+           ========================================== */
+
+        .pixel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        /* 1. Máscara do Homem-Aranha em Pixel Art (8x8) */
+        .pixel-spidey {
+            width: 15px;
+            height: 15px;
+            background: transparent;
+            /* Cada linha representa uma fileira de pixéis na grade */
+            box-shadow:
+                /* Linha 1 */ 45px 0 #d32f2f, 60px 0 #d32f2f,
+                /* Linha 2 */ 30px 15px #d32f2f, 45px 15px #d32f2f, 60px 15px #d32f2f, 75px 15px #d32f2f,
+                /* Linha 3 */ 15px 30px #d32f2f, 30px 30px #fff, 45px 30px #fff, 60px 30px #fff, 75px 30px #fff, 90px 30px #d32f2f,
+                /* Linha 4 */ 15px 45px #d32f2f, 30px 45px #000, 45px 45px #fff, 60px 45px #fff, 75px 45px #000, 90px 45px #d32f2f,
+                /* Linha 5 */ 15px 60px #d32f2f, 30px 60px #d32f2f, 45px 60px #000, 60px 60px #000, 75px 60px #d32f2f, 90px 60px #d32f2f,
+                /* Linha 6 */ 30px 75px #d32f2f, 45px 75px #d32f2f, 60px 75px #d32f2f, 75px 75 #d32f2f,
+                /* Linha 7 */ 45px 90px #d32f2f, 60px 90px #d32f2f;
+            margin-bottom: 110px; /* Compensa o tamanho do desenho gerado pela sombra */
+            margin-right: 90px;
+        }
+
+        /* 2. Teia de Aranha em Pixel Art */
+        .pixel-teia {
+            width: 10px;
+            height: 10px;
+            background: transparent;
+            box-shadow:
+                0px 0px #fff, 10px 0px #fff, 20px 0px #fff, 30px 0px #fff, 40px 0px #fff,
+                0px 10px #fff, 20px 10px #fff, 40px 10px #fff,
+                0px 20px #fff, 10px 20px #fff, 20px 20px #fff, 30px 20px #fff, 40px 20px #fff,
+                0px 30px #fff, 20px 30px #fff, 40px 30px #fff,
+                0px 40px #fff, 10px 40px #fff, 20px 40px #fff, 30px 40px #fff, 40px 40px #fff;
+            margin-bottom: 50px;
         }
     </style>
 </head>
@@ -83,17 +116,20 @@
             <h2>O Amigão da Vizinhança</h2>
             <p>Peter Parker era apenas um estudante comum até ser picado por uma aranha radioativa. Agora, ele usa seus poderes para proteger Nova York e equilibrar sua vida pessoal.</p>
             
-            <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?q=80&w=600" alt="Homem-Aranha em Nova York" class="imagem-aranha">
+            <div class="pixel-container">
+                <div class="pixel-spidey"></div>
+            </div>
         </section>
 
         <section class="meus-projetos">
             <h2>Meus Aprendizados na Alura</h2>
             <p>Aqui ficam os projetos que desenvolvi enquanto treino minhas habilidades de programação:</p>
             
-            <div class="card">
-                </div>
+            <div class="card"></div>
             
-            <img src="https://images.unsplash.com/photo-1608889175123-8ec330b86f84?q=80&w=600" alt="Máscara do Homem-Aranha" class="imagem-aranha">
+            <div class="pixel-container">
+                <div class="pixel-teia"></div>
+            </div>
         </section>
     </main>
 
