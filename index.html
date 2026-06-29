@@ -31,6 +31,15 @@
             text-shadow: 2px 2px #000;
         }
 
+        /* NOVA CLASSE: Para a imagem do topo ficar sem borda azul e sem sombra */
+        .imagem-topo {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 8px; /* Mantém apenas os cantinhos arredondados */
+        }
+
         /* Caixa centralizada principal */
         .container {
             max-width: 700px;
@@ -50,7 +59,7 @@
             text-transform: uppercase;
         }
 
-        /* Estilo para as suas imagens */
+        /* Estilo para as imagens do corpo do texto (com borda azul) */
         .imagem-aranha {
             display: block;
             max-width: 100%;
@@ -86,6 +95,14 @@
         .botao-reacao:hover {
             transform: scale(1.1);
         }
+
+        /* Linha separadora estilosa para o desafio */
+        .separador-desafio {
+            border: 0;
+            height: 2px;
+            background-image: linear-gradient(to right, transparent, #1976d2, #d32f2f, #1976d2, transparent);
+            margin: 40px 0;
+        }
     </style>
 </head>
 <body>
@@ -94,7 +111,7 @@
         <h1>Spider-Man & Meus Projetos</h1>
         <p>Com grandes poderes vêm grandes responsabilidades... e muitos códigos na Alura!</p>
         
-        <img src="imagem-aranha.png" alt="Imagem do topo" class="imagem-aranha">
+        <img src="imagem-aranha.png" alt="Imagem do topo" class="imagem-topo">
     </header>
 
     <main class="container">
@@ -115,15 +132,11 @@
             <button class="botao-reacao">Gostei 👍 <span>0</span></button>
             <button class="botao-reacao">Não Gostei 👎 <span>0</span></button> 
         </div>
-        <section class="perfil">
-            <h2>O Amigão da Vizinhança</h2>
-            <p>Peter Parker era apenas um estudante comum até ser picado por uma aranha radioativa. Agora, ele usa seus poderes para proteger Nova York e equilibrar sua vida pessoal.</p>
-            
-            <img src="homem-aranha.png" alt="Homem-Aranha em ação" class="imagem-aranha">
-        </section>
+
+        <hr class="separador-desafio">
 
         <section class="meus-projetos">
-            <h2>Meus Aprendizados na Alura</h2>
+            <h2>Meus Aprendizados na Alura (Post 2)</h2>
             <p>Aqui ficam os projetos que desenvolvi enquanto treino minhas habilidades de programação:</p>
         </section>
 
@@ -132,6 +145,15 @@
             <button class="botao-reacao">Gostei 👍 <span>0</span></button>
             <button class="botao-reacao">Não Gostei 👎 <span>0</span></button> 
         </div>
+
+        <section class="perfil">
+            <h2>O Amigão da Vizinhança (Post 2)</h2>
+            
+            <img src="homem-aranha.png" alt="Homem-Aranha em ação" class="imagem-aranha">
+            
+            <p>Peter Parker era apenas um estudante comum até ser picado por uma aranha radioativa. Agora, ele usa seus poderes para proteger Nova York e equilibrar sua vida pessoal.</p>
+        </section>
+
     </main>
            
     <footer style="text-align: center; padding: 20px; color: #1976d2; font-weight: bold;">
@@ -139,26 +161,23 @@
     </footer>
 
     <script>
-        // Selecionamos TODOS os botões que têm a classe .botao-reacao de uma vez só
         const botoes = document.querySelectorAll(".botao-reacao");
 
-        // Passamos por cada botão da lista e adicionamos a função do clique neles
-       botoes.forEach(function (botao) {
-    let curtiu = false;
-    botao.addEventListener("click", botaoClicado);
-    function botaoClicado() {
-        console.log("fui clicado");
-        let texto = botao.querySelector("span");
-        if (curtiu === false){
-            texto.textContent++;
-            curtiu = true;
-        } else{
-            texto.textContent--;
-            curtiu = false;
-        }
-    }
-})
-        
+        botoes.forEach(function (botao) {
+            let curtiu = false;
+            botao.addEventListener("click", botaoClicado);
+            function botaoClicado() {
+                console.log("fui clicado");
+                let texto = botao.querySelector("span");
+                if (curtiu === false){
+                    texto.textContent++;
+                    curtiu = true;
+                } else{
+                    texto.textContent--;
+                    curtiu = false;
+                }
+            }
+        });
     </script>
 </body>
 </html>
