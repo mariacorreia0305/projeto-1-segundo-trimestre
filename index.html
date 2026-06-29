@@ -50,7 +50,7 @@
             text-transform: uppercase;
         }
 
-        /* Estilo para as suas futuras imagens */
+        /* Estilo para as suas imagens */
         .imagem-aranha {
             display: block;
             max-width: 100%;
@@ -59,6 +59,25 @@
             border: 3px solid #1976d2;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(25, 118, 210, 0.3);
+        }
+
+        /* Estilização estilosa para o seu botão de Curtir */
+        .botao-curtir {
+            display: block;
+            margin: 20px auto;
+            background-color: #d32f2f;
+            color: white;
+            border: 2px solid #1976d2;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .botao-curtir:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -82,29 +101,24 @@
         <section class="meus-projetos">
             <h2>Meus Aprendizados na Alura</h2>
             <p>Aqui ficam os projetos que desenvolvi enquanto treino minhas habilidades de programação:</p>
-            
         </section>
-    </main>
-            <button>❤️<span>0</span></button>
+
+        <button class="botao-curtir">❤️ <span>0</span></button>
     </main>
            
     <footer style="text-align: center; padding: 20px; color: #1976d2; font-weight: bold;">
         Desenvolvido por Maria Clara Correia 🕷️
     </footer>
 
-</body>
-<script>
-    const botao = document.querySelector("button");
-    botao.addEventListener("click", botaoClicado);
+    <script>
+        const botao = document.querySelector(".botao-curtir");
+        botao.addEventListener("click", botaoClicado);
 
-    function botaoClicado() {
-    console.log("fui clicado");
-    let texto = botao.querySelector("span");
-    texto.textContent++;
-}
-
-</script>
-</html>
-
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            texto.textContent++;
+        }
+    </script>
 </body>
 </html>
