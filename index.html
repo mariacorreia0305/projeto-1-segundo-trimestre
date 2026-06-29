@@ -65,7 +65,8 @@
         .botoes-container {
             display: flex;
             justify-content: center;
-            gap: 15px; /* Espaço entre os botões */
+            flex-wrap: wrap;
+            gap: 15px; 
             margin: 20px auto;
         }
 
@@ -110,8 +111,9 @@
         </section>
 
         <div class="botoes-container">
-            <button class="botao-reacao id-curtir">❤️ <span>0</span></button>
-            <button class="botao-reacao id-joinha">👍 <span>0</span></button>
+            <button class="botao-reacao id-curtir">Amei ❤️ <span>0</span></button>
+            <button class="botao-reacao id-joinha">Gostei 👍 <span>0</span></button>
+            <button class="botao-reacao id-joinha">Não Gostei 👎 <span>0</span></button> 
         </div>
     </main>
            
