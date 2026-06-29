@@ -61,10 +61,16 @@
             box-shadow: 0 4px 10px rgba(25, 118, 210, 0.3);
         }
 
-        /* Estilização estilosa para o seu botão de Curtir */
-        .botao-curtir {
-            display: block;
+        /* Caixa para alinhar os botões lado a lado */
+        .botoes-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Espaço entre os botões */
             margin: 20px auto;
+        }
+
+        /* Estilização para os botões de reação */
+        .botao-reacao {
             background-color: #d32f2f;
             color: white;
             border: 2px solid #1976d2;
@@ -76,7 +82,7 @@
             transition: transform 0.2s;
         }
 
-        .botao-curtir:hover {
+        .botao-reacao:hover {
             transform: scale(1.1);
         }
     </style>
@@ -103,7 +109,10 @@
             <p>Aqui ficam os projetos que desenvolvi enquanto treino minhas habilidades de programação:</p>
         </section>
 
-        <button class="botao-curtir">❤️ <span>0</span></button>
+        <div class="botoes-container">
+            <button class="botao-reacao id-curtir">❤️ <span>0</span></button>
+            <button class="botao-reacao id-joinha">👍 <span>0</span></button>
+        </div>
     </main>
            
     <footer style="text-align: center; padding: 20px; color: #1976d2; font-weight: bold;">
@@ -111,12 +120,21 @@
     </footer>
 
     <script>
-        const botao = document.querySelector(".botao-curtir");
-        botao.addEventListener("click", botaoClicado);
+        // Configuração do botão de Coração
+        const botaoCurtir = document.querySelector(".id-curtir");
+        botaoCurtir.addEventListener("click", curtirClicado);
 
-        function botaoClicado() {
-            console.log("fui clicado");
-            let texto = botao.querySelector("span");
+        function curtirClicado() {
+            let texto = botaoCurtir.querySelector("span");
+            texto.textContent++;
+        }
+
+        // Configuração do botão de Joinha
+        const botaoJoinha = document.querySelector(".id-joinha");
+        botaoJoinha.addEventListener("click", joinhaClicado);
+
+        function joinhaClicado() {
+            let texto = botaoJoinha.querySelector("span");
             texto.textContent++;
         }
     </script>
